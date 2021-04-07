@@ -3,7 +3,8 @@ Library    SeleniumLibrary
 *** Keywords ***
 Ouvrir site Zou
     Open Browser    https://services-zou.maregionsud.fr/fr/    firefox
-    Wait until page contains element    xpath://span[text()="Identifiez-vous"]
+    Log    Ceci est la version de la branche
+    Wait until page contains element    xpath://i[@class="is-Icon is-Icon-com-user"]
     Accepter cookies
         
 Accepter cookies
@@ -17,8 +18,8 @@ Accepter cookies
 
 Se connecter
     [Arguments]    ${login}    ${password}    ${name}    ${connexionOK}=1    
-    Wait until page contains element    xpath://span[text()="Identifiez-vous"]
-	click element    xpath://span[text()="Identifiez-vous"]
+    Wait until page contains element    xpath://i[@class="is-Icon is-Icon-com-user"]
+	click element    xpath://i[@class="is-Icon is-Icon-com-user"]
 	Wait until page contains element    xpath://input[@id="is-LoginForm-Username"]    timeout=10s
 	Sleep    500ms
 	Input text    xpath://input[@id="is-LoginForm-Username"]    ${login}
