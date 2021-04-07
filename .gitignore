@@ -3,3 +3,9 @@
 red.xml
 .project
 libspecs
+.settings
+geckodriver-*.log
+log.html
+output.xml
+report.html
+selenium-screenshot-*.png
