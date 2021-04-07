@@ -36,3 +36,16 @@ jobs:
           echo test, and deploy your project.
           echo $GITHUB_WORKSPACE
           dir $GITHUB_WORKSPACE
+
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+    - name: Hello world action step
+      id: hello
+      uses: pierremelia/hello-world
+      with:
+        who-to-greet: 'Mona the Octocat'
+    # Use the output from the `hello` step
+    - name: Get the output time
+      run: echo "The time was ${{ steps.hello.outputs.time }}"
