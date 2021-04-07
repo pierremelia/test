@@ -1,0 +1,5 @@
+${login};${password};${name};${connexionOK};${info}
+joshuaaa@yopmail.com;Bzerg_121!;aa joshua;1;Passant pour Johsua
+juliemartin75@protonmail.com;Giroud7544@;Dubois Julien;1;Passant pour Julien
+juliemartin75@protonmail.com;mbappe;Dubois Julien;0;Pas passant car mot de passe incorrect
+juliemartin75@protonmail.come;Giroud7544@;Dubois Julien;0;Pas passant car login incorrect

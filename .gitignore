@@ -1,0 +1,5 @@
+#Ici sont listés les fichiers ignorés par git. Ils n'apparaitront plus en rouge lors du git status
+
+red.xml
+.project
+libspecs
