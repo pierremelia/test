@@ -53,8 +53,10 @@ jobs:
           date
           echo coucou je modifie le libellé du test unitaire
           echo Visualisation OK ?
+          date
           echo Re coucou j'ajoute une action au test
-          echo Modification prise compte ?          
+          echo Modification prise compte ? 
+          date         
           echo Super tout fonctionne
           echo Modification OK ?
   
