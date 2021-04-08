@@ -51,8 +51,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           date
-          echo coucou je suis dans les tests unitaires
-          echo ALors Ã§a conftionne ?
+          echo coucou je modifie le libellé du test unitaire
+          echo Visualisation OK ?
   
   deploy:
     # The type of runner that the job will run on
