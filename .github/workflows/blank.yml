@@ -53,6 +53,39 @@ jobs:
       - name: Run a multi-line script
         run: |
           date
-          echo coucou je suis dans les tests
+          echo coucou je suis dans les tests unitaires
           echo ALors ça conftionne ?
-                    
+  
+  deploy:
+    # The type of runner that the job will run on
+    name: Deploiement des packages sur REC
+    needs: test_uni
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          date
+          echo Etape de deploiement
+
+  test_reg:
+    # The type of runner that the job will run on
+    name: Tests non reg sur REC
+    needs: deploy
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          date
+          echo LA NOUS ALLONS METTRE LES TESTS
