@@ -107,7 +107,7 @@ jobs:
           ls -l ${{ github.workspace }}
           
       
-      - uses: actions/download-artifact@v2
+      - uses: actions/upload-artifact@master
         with:
             name: my-artifact
             path: ${{ github.workspace }}/resultat
