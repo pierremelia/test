@@ -37,7 +37,7 @@ jobs:
           echo contenu du repository que j'ai recupere dans $GITHUB_WORKSPACE
           ls -l $GITHUB_WORKSPACE
           
-    test_uni:
+  test_uni:
     # The type of runner that the job will run on
     name: Tests unitaires
     runs-on: ubuntu-latest
