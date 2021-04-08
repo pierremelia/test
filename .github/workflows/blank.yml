@@ -28,11 +28,11 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Là je vais construire le package
+          echo La je vais cocnstruire le package
           echo test, and deploy your project.
-          echo "Coucou tout le monde Où je me trouve (pwd)"
+          echo "Coucou tout le monde OÃ¹ je me trouve (pwd)"
           pwd
-          echo "Contenu du repository que j'ai récupéré dans $GITHUB_WORKSPACE"
+          echo "Contenu du repository que j'ai rÃ©cupÃ©rÃ© dans $GITHUB_WORKSPACE"
           ls -l $GITHUB_WORKSPACE
           date
           
@@ -50,7 +50,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo "coucou je modifie le libellé du test unitaire"
+          echo "coucou je modifie le libellÃ© du test unitaire"
           echo "Visualisation OK ?"
           echo "Re coucou j'ajoute une action au test"
           echo "Modification prise compte ?" 
@@ -73,7 +73,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           date
-          echo Etape de deploiement
+          echo Etape de deploiement de Brice
 
   test_reg:
     # The type of runner that the job will run on
@@ -99,3 +99,8 @@ jobs:
           BROWSER: chrome
           ROBOT_TESTS_DIR: ${{ github.workspace }}/src
           ROBOT_REPORTS_DIR: ${{ github.workspace }}/resultat
+          
+      - uses: actions/upload-artifact@master
+        with:
+            name: resultats_tests_robotframework
+            path: ${{ github.workspace }}/resultat
