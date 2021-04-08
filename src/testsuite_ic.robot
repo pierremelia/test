@@ -12,5 +12,6 @@ Troisieme test
 
 Qautrieme test
     Log    Ceci est le quatrieme test
-    Ouvrir site Zou
+    Open Browser    http://www.google.fr    firefox
+    #Ouvrir site Zou
     Capture Page Screenshot    
