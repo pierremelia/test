@@ -102,9 +102,3 @@ jobs:
         with:
             name: resultats_tests_robotframework
             path: ${{ github.workspace }}/resultat
-
-      - name: Resultats tests robotframework
-        uses: EnricoMi/publish-unit-test-result-action@v1
-        if: always()
-        with:
-          files: resultat/output.xml
