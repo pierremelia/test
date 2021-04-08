@@ -97,17 +97,14 @@ jobs:
           BROWSER: chrome
           ROBOT_TESTS_DIR: ${{ github.workspace }}/src
           ROBOT_REPORTS_DIR: ${{ github.workspace }}/resultat
-      
-      - name: Run a multi-line script
-        run: |
-          date
-          echo LA NOUS ALLONS METTRE LES TESTS
-          ls -l ${{ github.workspace }}/resultat
-          echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-          ls -l ${{ github.workspace }}
           
-      
       - uses: actions/upload-artifact@master
         with:
-            name: my-artifact
+            name: resultats_tests_robotframework
             path: ${{ github.workspace }}/resultat
+
+      - name: Resultats tests robotframework
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always()
+        with:
+          files: ${{ github.workspace }}/resultat/output.xml
