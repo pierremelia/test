@@ -54,7 +54,8 @@ jobs:
         run: |
           date
           echo coucou je suis dans les tests unitaires
-          echo ALors ça conftionne ?
+          echo ALors ça va pas ?
+
   
   deploy:
     # The type of runner that the job will run on
