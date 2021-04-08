@@ -18,6 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
+    name: Consctruction du package
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -25,13 +26,30 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
+          echo La je ais cocnstruire le pacage
           echo test, and deploy your project.
-          echo Coucou tout le monde
+          echo Coucou tout le monde et ou je me trouve (pwd)
+          pwd
+          echo contenu du repository que j'ai recupere dans $GITHUB_WORKSPACE
+          ls -l $GITHUB_WORKSPACE
+          
+    test_uni:
+    # The type of runner that the job will run on
+    name: Tests unitaires
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo coucou je suis dans les tests
+          echo ALors ça conftionne ?      
+          
