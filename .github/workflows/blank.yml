@@ -32,9 +32,9 @@ jobs:
         run: |
           echo La je ais cocnstruire le pacage
           echo test, and deploy your project.
-          echo Coucou tout le monde et ou je me trouve (pwd)
+          echo "Coucou tout le monde et ou je me trouve (pwd)"
           pwd
-          echo contenu du repository que j'ai recupere dans $GITHUB_WORKSPACE
+          echo "contenu du repository que j'ai recupere dans $GITHUB_WORKSPACE"
           ls -l $GITHUB_WORKSPACE
           
   test_uni:
