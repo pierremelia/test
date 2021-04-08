@@ -53,12 +53,12 @@ jobs:
           date
           echo coucou je modifie le libellé du test unitaire
           echo Visualisation OK ?
-          date
           echo Re coucou j'ajoute une action au test
-          echo Modification prise compte ?  
-          date
+          echo Modification prise compte ?          
           echo Super tout fonctionne
-          echo Modification OK ?  
+          echo Modification OK ?
+          date
+  
   deploy:
     # The type of runner that the job will run on
     name: Deploiement des packages sur REC
