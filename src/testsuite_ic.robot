@@ -12,5 +12,5 @@ Troisieme test
 
 Qautrieme test
     Log    Ceci est le quatrieme test
-    Ouvrir site Zou
+    Open Browser    https://zou.maregionsud.fr/    chrome
     Capture Page Screenshot    
