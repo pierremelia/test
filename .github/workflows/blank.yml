@@ -6,9 +6,7 @@ name: Integration Continue
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    
   pull_request:
-    
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -97,3 +95,14 @@ jobs:
           BROWSER: chrome
           ROBOT_TESTS_DIR: ${{ github.workspace }}/src
           ROBOT_REPORTS_DIR: ${{ github.workspace }}/resultat
+          
+      - uses: actions/upload-artifact@master
+        with:
+            name: resultats_tests_robotframework
+            path: ${{ github.workspace }}/resultat
+
+      - name: Resultats tests robotframework
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always()
+        with:
+          files: resultat/output.xml
