@@ -98,6 +98,15 @@ jobs:
           ROBOT_TESTS_DIR: ${{ github.workspace }}/src
           ROBOT_REPORTS_DIR: ${{ github.workspace }}/resultat
       
+      - name: Run a multi-line script
+        run: |
+          date
+          echo LA NOUS ALLONS METTRE LES TESTS
+          ls -l ${{ github.workspace }}/resultat
+          echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+          ls -l ${{ github.workspace }}
+          
+      
       - uses: actions/download-artifact@v2
         with:
             name: my-artifact
