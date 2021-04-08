@@ -54,7 +54,6 @@ jobs:
           echo coucou je modifie le libellé du test unitaire
           echo Visualisation OK ?
           
-	  - name: Run a multi-line script
         run: |
           date
           echo Re coucou j'ajoute une action au test
