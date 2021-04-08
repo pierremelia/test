@@ -89,6 +89,8 @@ jobs:
         run: |
           date
           echo LA NOUS ALLONS METTRE LES TESTS
+          ls -l ${{ github.workspace }}/src
+          chmod -R 777 ${{ github.workspace }}
       - name: Robot Framework
         uses: joonvena/robotframework-docker-action@v0.1
         env:
