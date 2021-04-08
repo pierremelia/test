@@ -2,7 +2,8 @@
 Library    SeleniumLibrary
 *** Keywords ***
 Ouvrir site Zou
-    Open Browser    https://services-zou.maregionsud.fr/fr/    firefox
+#    Open Browser    https://services-zou.maregionsud.fr/fr/    firefox
+    Open Browser    https://google.fr    firefox
     Wait until page contains element    xpath://span[text()="Identifiez-vous"]
     Accepter cookies
         
